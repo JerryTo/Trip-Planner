@@ -1,0 +1,518 @@
+/**********************************
+    General
+***********************************/
+table {
+  min-width: 475px;
+}
+textarea {
+  font-family: inherit;
+  width: 350px;
+  height: 75px;
+}
+@media (max-width: 500px) {
+  textarea {
+    width: 300px;
+  }
+}
+
+
+.green {
+  color: green;
+}
+.lightgray {
+  color: #bbbbbb;
+}
+.yellow {
+  color: yellow;
+}
+.black {
+  color: black;
+}
+.strong {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorPointer:hover {
+  color: dimgray;
+}
+
+.center {
+  text-align: center;
+}
+
+/**********************************
+    Miscellaneous
+***********************************/
+.tableIcon {
+  padding: 0 5px;
+}
+.App {
+  text-align: center;
+}
+
+.dim {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.todoItemTable {
+  white-space: normal;
+  padding: 10px;
+}
+
+.outerBox {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.searchBox {
+  padding: 8px;
+  width: 200px;
+}
+.outerBox h1 {
+  margin: 0;
+}
+
+.categories {
+  text-align: left;
+  list-style-type: none;
+}
+ul.categories {
+  font-size: 20px;
+}
+.categories svg {
+  width: 30px !important;
+}
+ul.categories span {
+  cursor: pointer;
+}
+
+.taskConfirm {
+  font-size: 35px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.taskConfirm:hover {
+  transform: scale(1.1);
+  color: darkgreen;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 1300px) {
+  .hideWhenMedium {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hideWhenSmall {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .hideWhenMobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hideWhenBig {
+    display: none !important;
+  }
+}
+
+/**********************************
+    Columns (Left, Middle, Right)
+***********************************/
+#leftColumn {
+  background-color: #f5f5f5;
+  height: 100vh;
+  top: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  margin-left: initial;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+@media (max-width: 1000px) {
+  #leftColumn {
+    height: initial;
+    max-width: initial;
+    padding-bottom: 20px;
+  }
+}
+
+#middleColumn {
+  width: 77%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all .2s ease-in-out;
+
+  margin-left: initial;
+  flex-basis: 75%;
+  max-width: 75%;
+
+  overflow: auto;
+}
+
+
+@media (max-width: 1000px) {
+  #middleColumn {
+    position: initial;
+    max-width: 100%;
+    width: initial;
+  }
+}
+
+#rightColumn {
+  background-color: #f5f5f5;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  margin-left: initial;
+  flex-basis: 75%;
+  max-width: 75%;
+
+  white-space: nowrap;
+  overflow: auto;
+}
+@media (max-width: 600px) {
+  #rightColumn {
+    max-width: 100%;
+  }
+}
+
+.rightColumnActive {
+  width: 500px !important;
+  z-index: 5000;
+}
+#rightColumnFooter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background-color: #efefef;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.tableWrapper {
+  padding-bottom: 100px;
+}
+/**********************************
+    cardBlock
+***********************************/
+.cardBlock {
+  width: 80%;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  padding: 5px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cardBlockTitle {
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  margin-bottom: 10px;
+}
+.cardBlock:hover {
+  transition: .2s ease-out;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.cardBlockInner {
+  min-height: 100px;
+  display: flex;
+  position: relative;
+}
+.cardBlockCategory {
+  color: #767676;
+  font-size: 20px;
+  text-align: left;
+}
+.cardBlockCategory .icon {
+  width: 35px;
+}
+
+.cardBlockTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cardBlockLeft {
+  min-width: 230px;
+}
+
+.cardBlockDestination {
+  font-size: 25px;
+  left: 30%;
+  padding: 15px 0;
+  max-width: 500px;
+}
+
+/**********************************
+    inputBlock
+***********************************/
+.inputBlock {
+  margin: 15px 50px;
+  text-align: left;
+}
+.inputBlock label {
+  display: block;
+}
+.inputBlock input, .inputBlock select {
+  padding: 8px 10px;
+}
+.inputBlock.flex {
+  display: flex;
+}
+.inputBlockFlexLeft {
+  padding-right: 30px;
+}
+input.inputWide {
+  width: 300px;
+}
+@media (max-width: 500px) {
+  input.inputWide {
+    width: 225px;
+  }
+}
+input.inputShort {
+  width: 75px;
+}
+
+/**********************************
+    Button (bttn)
+***********************************/
+.bttn {
+  color: white !important;
+  height: 50px;
+  padding: 0 2rem;
+  font-size: 20px;
+  border: none;
+  transition: .2s ease-out;
+  display: inline-block;
+  line-height: 47px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bttn-round {
+  border-radius: 40px;
+}
+
+.bttn-red {
+  background-color: #990000;
+}
+.bttn-red:hover {
+  background-color: rgba(153, 0, 0, 0.7);
+}
+.bttn-red:active {
+  background-color: rgba(153, 0, 0, 0.4);
+}
+
+.bttn-darkblue {
+  background-color: #405767;
+}
+.bttn-darkblue:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.bttn-darkblue:active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bttn-green {
+  background-color: rgba(27, 94, 32, 1);
+}
+.bttn-green:hover {
+  background-color: rgba(27, 94, 32, 0.85);
+}
+.bttn-green:active {
+  background-color: rgba(27, 94, 32, 0.7);
+}
+
+.bttn-footer {
+  padding: initial;
+}
+.bttn-half {
+  width: 50%;
+}
+.bttn-quarter {
+  width: 25%;
+}
+.bttn svg {
+  padding-right: 5px;
+}
+
+/**********************************
+    Progress Bar
+***********************************/
+.progressBarContainer {
+  display: flex;
+  padding: 20px 15px 40px 15px;
+}
+.progressBarLine {
+  background-color: #dadada;
+  width: 100px;
+  height: 5px;
+  margin: 15px -5px;
+  border: 2px solid transparent;
+  display: flex;
+}
+.progressBarLine.green {
+  background-color: #007849;
+}
+.progressBarText {
+  display: block;
+  width: 105px;
+  text-align: center;
+  -webkit-transform: translateX(calc(-50% + 17px));
+  transform: translateX(calc(-50% + 17px));
+  position: absolute;
+}
+.progressBarCircle {
+  font-size: 40px;
+  z-index: 100;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.progressBarCircle.green:hover {
+  color: #009600;
+}
+.progressBarCircle.lightgray:hover {
+  color: #a0a0a0;
+}
+.progressBarCircle.yellow {
+  color: #ffbe00;
+}
+.progressBarCircle.yellow:hover {
+  color: #ff9b00;
+}
+.progressBarCircle:hover {
+  cursor: pointer;
+}
+.progressBarHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+  .progressBarHeader {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .progressBarHeader {
+    position: initial;
+    width: 120px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .progressIcon {
+    padding: 0 10px;
+  }
+}
+
+/**********************************
+    Modal
+***********************************/
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  background: rgb(255, 255, 255);
+  border: 1px rgb(136, 136, 136);
+  border-radius: 4px;
+  margin-right: -50%;
+  width: 85%;
+  max-width: 500px;
+  max-height: 85%;
+  padding: 1em;
+  transform: translate(-50%, -50%);
+}
+.modalWide {
+  max-width: 700px;
+}
+
+.dim-modal {
+  z-index: 10000;
+}
+
+.modal .bttn{
+  margin: 20px;
+}
+
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  padding: 10px;
+  color: gray;
+  transition: all 0.2s ease-in-out;
+}
+.cancel:hover {
+  color: black;
+}
+
+.modal table {
+  display: initial;
+}
+
+.modal tbody {
+  text-align: left;
+}
+
+.modalIntro {
+  padding: 10px 0 20px 0;
+}
+
+.reminderIcon {
+  font-size: 40px;
+  cursor: pointer;
+}
+.reminderIcon:hover svg, .reminderIcon:hover {
+  color: green;
+  transition: all 0.2s ease-in-out;
+}

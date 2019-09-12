@@ -1,0 +1,74 @@
+{
+  "trips": [
+    {
+      "id": "1",
+      "title": "Canada meeting",
+      "destination": "Toronto",
+      "category": "Business",
+      "startDate": "2019-09-11T07:00:00.000Z",
+      "endDate": "2019-09-25T07:00:00.000Z",
+      "reminderDate": "2019-09-02T07:00:00.000Z",
+      "description": "Meeting in Canada with Canadians",
+      "todo": [
+        {
+          "id": 1,
+          "task": "Bring passport",
+          "complete": "false"
+        },
+        {
+          "id": 2,
+          "task": "Exchange money for Canadian dollars",
+          "complete": "false"
+        },
+        {
+          "id": 3,
+          "task": "Book flight",
+          "complete": "true"
+        },
+        {
+          "id": 4,
+          "task": "Exchange money for Canadian dollarsExchange money for Canadian dollarsExchange money for Canadian dollarsExchange money for Canadian dollarsExchange money for Canadian dollars",
+          "complete": "true"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Test Title",
+      "destination": "Test Destination",
+      "category": "Vacation",
+      "startDate": "2019-09-18T07:00:00.000Z",
+      "endDate": "2019-09-25T07:00:00.000Z",
+      "reminderDate": "2019-09-25T07:00:00.000Z",
+      "description": "Meeting in Canada with Canadians",
+      "todo": [
+        {
+          "id": 100,
+          "task": "Bring passport",
+          "complete": "true"
+        },
+        {
+          "id": 200,
+          "task": "Exchange money for Canadian dollars",
+          "complete": "true"
+        },
+        {
+          "id": 300,
+          "task": "Book flight",
+          "complete": "true"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Test Title2",
+      "destination": "Test destination2",
+      "category": "Business",
+      "startDate": "2019-09-18T07:00:00.000Z",
+      "endDate": "2019-09-25T07:00:00.000Z",
+      "reminderDate": "",
+      "description": "",
+      "todo": []
+    }
+  ]
+}
